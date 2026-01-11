@@ -1,4 +1,6 @@
 import pandas as pd
+import numpy as pe 
+
 from chembl_webresource_client.new_client import new_client
 
 
@@ -11,5 +13,5 @@ activity = new_client.activity
 res = activity.filter(target_chembl_id=selected_target).filter(standard_type="IC50")
 df = pd.DataFrame.from_dict(res)
 
-
+print(df)
 print(target)
