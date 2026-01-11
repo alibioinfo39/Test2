@@ -142,3 +142,25 @@ for prop, count in property_count.items():
     percent = (count / len(sequence)) * 100
     print(f"{prop.capitalize()} residues: {count}")
     print(f"{prop.capitalize()} percentage: {percent:.2f}%\n")
+
+
+#BURGER
+burger = {
+    "Age" : 2,
+    "FastFood" : False,
+    "Coco" : False
+}
+
+
+if burger["Age"] <= 18:
+        print("ur a minor")
+else:
+        print("ur an adult")
+if burger["FastFood"] == True:
+        print("Ur a FastFood boy")
+else:
+        print("ur not a FAST FOOD!!!")
+if burger["Coco"] == True:
+        print("You have your COCO!")
+else:
+        print("U are cocomartin")
