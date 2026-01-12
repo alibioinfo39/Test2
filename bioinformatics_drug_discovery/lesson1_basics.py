@@ -140,27 +140,31 @@ for aa in sequence:
 # Calculate percentages
 for prop, count in property_count.items():
     percent = (count / len(sequence)) * 100
-    print(f"{prop.capitalize()} residues: {count}")
-    print(f"{prop.capitalize()} percentage: {percent:.2f}%\n")
+    # print(f"{prop.capitalize()} residues: {count}")
+    # print(f"{prop.capitalize()} percentage: {percent:.2f}%\n")
 
 
-#BURGER
-burger = {
-    "Age" : 2,
-    "FastFood" : False,
-    "Coco" : False
+#Assignment 3
+pe ={
+    "Positive": 0,
+    "Negative": 0,
+    "Polar": 0,
+    "Neutral": 0,
+    "Hydrophobic" :0
 }
 
+for el in sequence:
+    if el in aa_property:
+        pa = aa_property[el]   # keep original case
+        pe[pa] += 1
+    else:
+        print(f"Unknown amino acid detected: {el}")
 
-if burger["Age"] <= 18:
-        print("ur a minor")
-else:
-        print("ur an adult")
-if burger["FastFood"] == True:
-        print("Ur a FastFood boy")
-else:
-        print("ur not a FAST FOOD!!!")
-if burger["Coco"] == True:
-        print("You have your COCO!")
-else:
-        print("U are cocomartin")
+for pa, tes in pe.items():
+    perc = (tes / len(sequence))*100
+
+print(f"{pa.capitalize()} Residues: {tes}")
+print(f"{pa.capitalize()} Percentage: {perc:.2f}\n")
+        
+
+
